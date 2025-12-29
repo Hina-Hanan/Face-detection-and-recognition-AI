@@ -11,13 +11,13 @@ A complete face detection and recognition system that identifies individuals fro
 - [Installation](#installation)
 - [Usage](#usage)
 - [System Architecture](#system-architecture)
-- [Algorithms & Methods](#algorithms--methods)
+- [Algorithms & Methods](#algorithms-methods)
 - [Performance](#performance)
 - [Results](#results)
 - [Limitations](#limitations)
 - [Future Enhancements](#future-enhancements)
 
-## 🎯 Introduction
+## 🎯 Introduction {#introduction}
 
 This project implements a face detection and recognition system that:
 
@@ -33,7 +33,7 @@ This project implements a face detection and recognition system that:
 
 - **Face Recognition**: Identifies who the face belongs to. Uses the Facenet model to generate 128-dimensional embeddings, then matches them using cosine similarity against pre-computed database embeddings.
 
-## ✨ Features
+## ✨ Features {#features}
 
 - ✅ Complete dataset preparation pipeline with filtering and augmentation
 - ✅ Pre-computed embedding cache for fast recognition
@@ -43,7 +43,7 @@ This project implements a face detection and recognition system that:
 - ✅ Support for multiple face recognition models
 - ✅ Visualization of results (confusion matrix, accuracy charts)
 
-## 🛠 Technologies Used
+## 🛠 Technologies Used {#technologies-used}
 
 ### Core Deep Learning & Face Recognition
 - **TensorFlow** (>=2.20.0) - Backend for DeepFace models
@@ -66,7 +66,7 @@ This project implements a face detection and recognition system that:
 ### Web Interface
 - **Streamlit** (>=1.38.0) - Web UI for image upload and recognition
 
-## 📁 Project Structure
+## 📁 Project Structure {#project-structure}
 
 ```
 face_recognition/
@@ -95,7 +95,7 @@ face_recognition/
 └── README.md                         # This file
 ```
 
-## 🚀 Installation
+## 🚀 Installation {#installation}
 
 ### Prerequisites
 
@@ -129,7 +129,7 @@ face_recognition/
    - For Linux/Streamlit Cloud: Packages listed in `packages.txt` will be installed automatically
    - For local development: Ensure OpenCV dependencies are available
 
-## 📖 Usage
+## 📖 Usage {#usage}
 
 ### Step 1: Prepare Your Dataset
 
@@ -199,7 +199,7 @@ The web interface allows you to:
 - Switch between different models and detectors
 - View evaluation results
 
-## 🏗 System Architecture
+## 🏗 System Architecture {#system-architecture}
 
 ### Data Flow
 
@@ -226,7 +226,7 @@ Embeddings Cache (data/train_embeddings_cache.pkl)
 - **02_evaluate.py** → Reads `data/train_db/` and `data/test_metadata.csv`, generates `data/train_embeddings_cache.pkl` and `plots/`
 - **03_streamlit_ui.py** → Reads `data/train_embeddings_cache.pkl` for fast recognition
 
-## 🔬 Algorithms & Methods
+## 🔬 Algorithms & Methods {#algorithms-methods}
 
 ### 1. Facenet Model
 - **Where**: Used in `02_evaluate.py` and `03_streamlit_ui.py` via `DeepFace.represent(model_name="Facenet")`
@@ -255,7 +255,7 @@ Embeddings Cache (data/train_embeddings_cache.pkl)
 - **Purpose**: Increases training data diversity
 - **Advantages**: Improves model robustness to variations
 
-## ⚡ Performance
+## ⚡ Performance {#performance}
 
 ### Optimization Strategies
 
@@ -272,7 +272,7 @@ Embeddings Cache (data/train_embeddings_cache.pkl)
 - **Recognition (with cache)**: O(1) embedding + O(M) similarity where M = database size
 - **Recognition (without cache)**: O(1) embedding + O(M) similarity + O(N) embedding generation
 
-## 📊 Results
+## 📊 Results {#results}
 
 ### Evaluation Outputs
 
@@ -288,7 +288,7 @@ Embeddings Cache (data/train_embeddings_cache.pkl)
 - **Distance**: Cosine distance (0.0 = identical, 1.0 = completely different)
 - **Threshold**: 0.7 (configurable in UI)
 
-## ⚠️ Limitations
+## ⚠️ Limitations {#limitations}
 
 1. **Single Face Processing**: Only processes first detected face in multi-face images
 2. **Fixed Threshold**: Hardcoded 0.7 threshold in evaluation (configurable in UI)
@@ -301,7 +301,7 @@ Embeddings Cache (data/train_embeddings_cache.pkl)
 9. **Error Recovery**: Stops evaluation after 10 consecutive errors
 10. **Single Model**: Only Facenet evaluated (other models available but not tested)
 
-## 🔮 Future Enhancements
+## 🔮 Future Enhancements {#future-enhancements}
 
 1. **Multi-face Detection**: Process all faces in an image, not just the first
 2. **Adaptive Threshold**: Learn optimal threshold per person or dataset
