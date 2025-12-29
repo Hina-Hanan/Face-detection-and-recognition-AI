@@ -1,6 +1,6 @@
 # Core Deep Learning & Face Recognition
-tensorflow>=2.15.0,<2.21.0
-keras>=2.15.0,<2.21.0
+tensorflow>=2.20.0
+# Keras is installed automatically with TensorFlow (no need to specify separately)
 deepface==0.0.91
 
 # Computer Vision & Image Processing
