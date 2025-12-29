@@ -1,6 +1,7 @@
 # Core Deep Learning & Face Recognition
 tensorflow>=2.20.0
-# Keras is installed automatically with TensorFlow (no need to specify separately)
+# tf_keras is required for legacy Keras support in TensorFlow 2.20.0
+tf_keras>=2.20.0
 deepface==0.0.91
 
 # Computer Vision & Image Processing
