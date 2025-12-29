@@ -1,23 +1,23 @@
 # Core Deep Learning & Face Recognition
-tensorflow==2.15.0
-keras==2.15.0
+tensorflow>=2.15.0,<2.21.0
+keras>=2.15.0,<2.21.0
 deepface==0.0.91
 
 # Computer Vision & Image Processing
-opencv-python-headless==4.10.0.84
-pillow==10.4.0
+opencv-python-headless>=4.10.0
+pillow>=10.4.0
 
 # Data Processing & Analysis
-pandas==2.2.3
-numpy==1.24.4
-scikit-learn==1.5.2
+pandas>=2.2.0
+numpy>=1.24.0,<2.0.0
+scikit-learn>=1.5.0
 
 # Visualization
-matplotlib==3.9.2
-seaborn==0.13.2
+matplotlib>=3.9.0
+seaborn>=0.13.0
 
 # Web Interface
-streamlit==1.38.0
+streamlit>=1.38.0
 
 # Optional: Face Detection Backend (used by deepface)
-# mtcnn==0.1.1  # Uncomment if using mtcnn detector backend
+# mtcnn>=0.1.1  # Uncomment if using mtcnn detector backend
