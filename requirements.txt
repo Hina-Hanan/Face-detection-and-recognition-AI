@@ -5,6 +5,7 @@ deepface==0.0.91
 
 # Computer Vision & Image Processing
 # opencv-python is installed automatically by deepface (opencv-python>=4.5.5.64)
+# libgl1 system library is installed via packages.txt for Streamlit Cloud
 pillow>=10.4.0
 
 # Data Processing & Analysis
