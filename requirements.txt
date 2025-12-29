@@ -4,7 +4,7 @@ tensorflow>=2.20.0
 deepface==0.0.91
 
 # Computer Vision & Image Processing
-opencv-python-headless>=4.10.0
+# opencv-python is installed automatically by deepface (opencv-python>=4.5.5.64)
 pillow>=10.4.0
 
 # Data Processing & Analysis
